@@ -1,102 +1,71 @@
-1. Project Title
-Tic-Tac-Toe: Python Console Game
+❌⭕ Tic-Tac-Toe Game
+A classic, command-line interface (CLI) implementation of Tic-Tac-Toe built using Python. This project allows two players to play against each other on the same machine using a numbered grid system.
 
-2. Overview of the Project
-This project is a digital implementation of the classic paper-and-pencil game "Tic-Tac-Toe" (also known as Noughts and Crosses). Built using Python, the application runs in a Command Line Interface (CLI) environment. The primary objective of this project is to demonstrate the use of fundamental programming concepts—such as arrays (lists), conditional logic, loops, and input validation—to create an interactive, bug-free gaming experience.
+📝 Description
+This project is a logic-based Python application that simulates a standard 3x3 Tic-Tac-Toe board. It utilizes lists to track player moves and mathematical logic to determine win conditions (rows, columns, and diagonals). The game runs in the terminal and updates the board state after every turn.
 
-The game allows two players to play locally on the same machine, taking turns to mark spaces in a 3×3 grid. The program acts as a referee, automatically detecting wins, draws, and invalid moves.
+✨ Features
+Two-Player Mode: Play locally with a friend (Player X vs. Player O).
 
-3. Features
-Interactive 3x3 Grid: A clear, text-based visualization of the board that updates after every turn.
+Real-time Board Rendering: The board refreshes after every move to show the current game state.
 
-Multiplayer Logic: Supports 2-player "hotseat" gameplay (Player X vs. Player O).
+Win Detection: Automatically detects if X or O has won via rows, columns, or diagonals.
 
-Win Detection Algorithm: Instantly checks for a winner across 8 axes:
+Draw Detection: Recognizes when all 9 spots are filled without a winner.
 
-3 Horizontal Rows
+Input Validation: Prevents players from overwriting an occupied spot.
 
-3 Vertical Columns
+💻 Requirements
+Python 3.x
 
-2 Diagonals
+🚀 How to Run
+Ensure you have Python installed on your system.
 
-Smart Input Validation:
+Download the main.py (or whatever you named your file) to your computer.
 
-Prevents the game from crashing if a user types a letter instead of a number.
+Open your terminal or command prompt.
 
-Prevents players from overwriting a spot that is already taken.
+Navigate to the folder containing the file.
 
-Draw State Handling: Recognizes when the board is full without a winner and ends the game gracefully.
-
-Restart Mechanism: Allows players to play multiple rounds without restarting the script.
-
-4. Technologies/Tools Used
-Programming Language: Python (Version 3.x)
-
-Development Environment (IDE): VS Code / PyCharm / IDLE (or any text editor)
-
-Operating System: Cross-platform (Windows, macOS, Linux)
-
-Version Control: Git (for tracking code changes)
-
-5. Steps to Install & Run the Project
-Step 1: Verify Python Installation Ensure Python is installed on your computer. Open your terminal (Command Prompt) and type:
+Run the command:
 
 Bash
 
-python --version
-Step 2: Download the Project Download the tictactoe.py file to a folder on your computer.
+python main.py
+🎮 How to Play
+The game uses a 0-8 numbering system to map the board positions. When it is your turn, enter the number corresponding to the spot you want to claim.
 
-Step 3: Open Terminal Navigate to the folder where you saved the file:
+The Grid Layout:
 
-Bash
+Plaintext
 
-cd path/to/your/folder
-Step 4: Execute the Script Run the game using the following command:
+ 0 | 1 | 2 
+---|---|---
+ 3 | 4 | 5 
+---|---|---
+ 6 | 7 | 8 
+The game starts with Player X.
 
-Bash
+Enter a number (0-8) when prompted.
 
-python tictactoe.py
-6. Instructions for Testing
-To ensure the game works correctly, perform the following manual tests:
+Player O goes next.
 
-Test Case A: The "Win" Scenario
+The game continues until a player wins or the board is full (Draw).
 
-Start the game.
+📂 Code Structure
+printBoard(playerX_move, playerO_move): Handles the visual representation of the grid.
 
-Player X enters 1.
+checkWin(playerX_move, playerO_move): Iterates through winning combinations to check for a victory.
 
-Player O enters 4.
+tic_tac_toe(a, b, c): A helper function that sums the values of a specific line to calculate logic.
 
-Player X enters 2.
+Main Loop: Manages the flow of the game, turn switching, and user input.
 
-Player O enters 5.
+🔮 Future Improvements
+Add a "Play Again" feature without restarting the script.
+Implement a Single Player mode (vs. Computer).
+Add a graphical user interface (GUI) using Tkinter or Pygame.
 
-Player X enters 3.
+Implement a Single Player mode (vs. Computer).
 
-Expected Result: The game should stop, display the board, and print "Player X Wins!" (Testing the top row win condition).
-
-Test Case B: The "Occupied Spot" Error
-
-Start the game.
-
-Player X enters 5.
-
-Player O tries to enter 5.
-
-Expected Result: The game should display a warning: "Spot already taken, try again" and allow Player O to choose a different number.
-
-Test Case C: The "Invalid Input" Error
-
-Start the game.
-
-Player X enters Z or hello.
-
-Expected Result: The program should not crash. It should display "Invalid input. Please enter a number between 1-9."
-
-Test Case D: The "Draw" Scenario
-
-Play a game where players block each other so no one gets 3 in a row.
-
-Fill the 9th and final square.
-
-Expected Result: The game should declare "It's a Draw!" and ask if you want to play again.
+Add a graphical user interface (GUI) using Tkinter or Pygame.
